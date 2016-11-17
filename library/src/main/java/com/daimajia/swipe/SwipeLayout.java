@@ -1546,14 +1546,9 @@ public class SwipeLayout extends FrameLayout {
         void onDoubleClick(SwipeLayout layout, boolean surface);
     }
 
-    private int dp2px(float dp) {
-//        return (int) (dp * getContext().getResources().getDisplayMetrics().density + 0.5f);
-        Resources resources = getContext().getResources();
-        DisplayMetrics metrics = resources.getDisplayMetrics();
-        float px = dp * ((float) metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);
-        return (int) px;
+    public int dp2px(float dp) {
+        return (int) (dp * getContext().getResources().getDisplayMetrics().density + 0.5f);
     }
-
 
     /**
      * Deprecated, use {@link #setDrag(DragEdge, View)}
