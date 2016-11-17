@@ -1546,10 +1546,8 @@ public class SwipeLayout extends FrameLayout {
         void onDoubleClick(SwipeLayout layout, boolean surface);
     }
 
-    @TargetApi(Build.VERSION_CODES.DONUT)
     private int dp2px(float dp) {
 //        return (int) (dp * getContext().getResources().getDisplayMetrics().density + 0.5f);
-
         Resources resources = getContext().getResources();
         DisplayMetrics metrics = resources.getDisplayMetrics();
         float px = dp * ((float) metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);
